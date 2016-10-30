@@ -8,8 +8,8 @@ A Symfony project created on October 30, 2016, 12:38 pm.
 - ``$ composer install``
 - ``$ bower install``
 - create a new database connection in your ``app/config/parameters.yml`` file
-- insert some dummy data in the ``persons`` table
 - ``$ php bin/console doctrine:database:create``
 - ``$ php bin/console doctrine:schema:update --force``
+- insert some dummy data in the ``persons`` table
 - ``$ php bin/console server:run``
 - access: ``127.0.0.1:8000/`` in your favorite browser.
