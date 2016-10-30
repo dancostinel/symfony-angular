@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="person">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        {% stylesheets
+            '@AppBundle/Resources/config/public/bootstrap/dist/css/bootstrap.min.css'
+            '@AppBundle/Resources/config/public/css/app.css'
+            filter='cssrewrite'
+        %}
+            <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+        {% endstylesheets %}
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% block body %}{% endblock %}
+{% block javascripts %}
+    {% javascripts
+    '@AppBundle/Resources/config/public/jquery/dist/jquery.min.js'
+    '@AppBundle/Resources/config/public/angular/angular.min.js'
+    '@AppBundle/Resources/config/public/bootstrap/dist/js/bootstrap.min.js'
+    '@AppBundle/Resources/config/public/js/app.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+</body>
+</html>

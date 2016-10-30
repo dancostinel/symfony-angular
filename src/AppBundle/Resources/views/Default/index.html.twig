@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div class="container" ng-controller="TestController as test">
+        <div class="row">
+            <div class="col-xs-12">
+                <div ng-repeat="person in test.persons">
+                    {% verbatim %}
+                        {{ person.name + ' ' + person.age }}
+                    {% endverbatim %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
